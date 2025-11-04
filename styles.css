@@ -198,15 +198,18 @@ body {
 .feature-icon {
     height: 60px;
     width: 60px;
-    background: #9370DB;
     border-radius: 50%;
     margin: 0 auto 20px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: #9370DB;
 }
 @media (max-width: 768px) {
-    .feature-icon { background-image: none !important; background-color: #9370DB; }
+    .feature-icon {
+        background-image: none !important;
+        background-color: #9370DB;
+    }
 }
 
 .feature-title > span {
@@ -362,6 +365,7 @@ body {
     display: flex;
     gap: 15px;
 }
+
 
 
 
