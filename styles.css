@@ -242,8 +242,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-left: 5px solid #9370DB;
+    text-align: center;
 }
-
 .testimonial-image {
     height: 100px;
     width: 100px;
@@ -356,4 +356,5 @@ body {
     display: flex;
     gap: 15px;
 }
+
 
