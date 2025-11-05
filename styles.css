@@ -92,15 +92,46 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #1E90FF, #6A0DAD);
     margin-top: 80px;
     color: #FFFFFF;
+    overflow: hidden;
 }
-
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/cars.gif') center/cover no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    z-index: 1;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.9), rgba(106, 13, 173, 0.9));
+    z-index: 2;
+}
 .hero-content {
-    text-align: center;
+    position: relative;
     z-index: 10;
+    text-align: center;
     padding: 0 20px;
+}
+@media (max-width: 768px) {
+    .hero::before,
+    .hero::after {
+        display: none;
+    }
+    .hero {
+        background: linear-gradient(135deg, #1E90FF, #6A0DAD);
+    }
 }
 
 .hero-title > span {
@@ -365,6 +396,7 @@ body {
     display: flex;
     gap: 15px;
 }
+
 
 
 
