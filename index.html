@@ -13,7 +13,7 @@
             <div class="nav-items">
                 <a href="#home" class="nav-link page"><span>Home</span></a>
                 <a href="#pricing" class="nav-link page"><span>Pricing</span></a>
-                <a href="#about" class="nav-link about"><span>About</span></a>
+                <a href="#" class="nav-link about" id="open-about"><span>About</span></a>
                 <a href="#login" class="button sign-in-button"><span>Sign In</span></a>
             </div>
         </nav>
@@ -79,7 +79,7 @@
 
         <div class="contact">
             <h2 class="contact-title"><span>¿Quieres saber más?</span></h2>
-            <p class="contact-subtitle"><span>Agrega tus datos y te contactaremos</span></p>
+            <p class="contact-subtitle"><span>Agrega tus datos y te contactaremos o escríbenos a <a href="mailto:payeasypos@gmail.com" style="color: #1E90FF; font-weight: 500;">payeasypos@gmail.com</a></span></p>
             <form class="contact-form">
                 <div class="form-group">
                     <label class="form-label"><span>Nombre completo</span></label>
@@ -115,7 +115,7 @@
                         <h4 class="footer-heading"><span>Compañía</span></h4>
                         <a href="#" class="footer-link"><span>Acerca de</span></a>
                         <a href="#" class="footer-link"><span>Carreras</span></a>
-                        <a href="#" class="footer-link"><span>Contacto</span></a>
+                        <a href="mailto:payeasypos@gmail.com" class="footer-link"><span>Contacto</span></a>
                     </div>
                     <div class="footer-column">
                         <h4 class="footer-heading"><span>Recursos</span></h4>
@@ -133,5 +133,39 @@
             </div>
         </footer>
     </div>
+
+    <!-- Modal About -->
+    <div class="about-modal" id="about-modal">
+        <div class="about-content">
+            <span class="about-close" id="close-about">&times;</span>
+            <h3 style="color: #6A0DAD; margin-bottom: 15px;">Sobre PayEasy</h3>
+            <ul class="about-list">
+                <li>Cómo se creó</li>
+                <li>Trabaja con nosotros</li>
+                <li><a href="mailto:payeasypos@gmail.com">Contactos</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const openBtn = document.getElementById('open-about');
+        const modal = document.getElementById('about-modal');
+        const closeBtn = document.getElementById('close-about');
+
+        openBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
